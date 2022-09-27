@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.BuffaloActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,14 +35,33 @@
                 android:layout_margin="10dp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvNetEconomicLoss"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NetEconomicLoss"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@id/lnlFrames" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/lnlNetLoss"
+            android:visibility="visible">
+                <TextView
+                    android:id="@+id/tvNetEconomicLossLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Net Economic Loss"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toBottomOf="@id/lnlFrames"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvNetEconomicLoss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="0.0"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    />
+        </LinearLayout>
 
     </LinearLayout>
 

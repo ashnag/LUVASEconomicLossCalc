@@ -1,4 +1,4 @@
-package com.example.luvaseconomiclosscalc
+package com.example.luvaseconomiclosscalc.adaptor
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.luvaseconomiclosscalc.R
 import com.example.luvaseconomiclosscalc.models.MilkProduceLoss
 
 class MilkProduceLossAdaptor(val milkProduceLossItems: List<MilkProduceLoss>, var onTextChanged: (String, Int) -> Unit) : RecyclerView.Adapter<MilkProduceLossAdaptor.ViewHolder>() {
@@ -70,8 +71,8 @@ class MilkProduceLossAdaptor(val milkProduceLossItems: List<MilkProduceLoss>, va
 
         }
 
-        fun bind(contact: MilkProduceLoss, position: Int) {
-            tvAge.text = contact.ageGroup
+        fun bind(milkProduceLoss: MilkProduceLoss, position: Int) {
+            tvAge.text = milkProduceLoss.ageGroup
 
             tvTotalLossMilkProduction.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
