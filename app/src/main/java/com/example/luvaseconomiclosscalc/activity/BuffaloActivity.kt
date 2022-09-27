@@ -2,10 +2,12 @@ package com.example.luvaseconomiclosscalc.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.luvaseconomiclosscalc.DraftCapabilityReductionFragment
 import com.example.luvaseconomiclosscalc.FragmentLossChangeEventListener
 import com.example.luvaseconomiclosscalc.MilkProduceReductionFragment
 import com.example.luvaseconomiclosscalc.R
 import com.example.luvaseconomiclosscalc.databinding.ActivityBuffaloBinding
+import com.example.luvaseconomiclosscalc.models.DraftCapabilityLoss
 import com.example.luvaseconomiclosscalc.models.MilkProduceLoss
 
 
@@ -30,15 +32,11 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
             commit()
         }
 
-        val fragment2 = MilkProduceReductionFragment.newInstance(1)
-        val milkProduceLossItems2 = ArrayList<MilkProduceLoss>()
-        milkProduceLossItems2.add(MilkProduceLoss("Adult", 0, 0, 0.0f))
-        milkProduceLossItems2.add(MilkProduceLoss("Heifer", 0, 0, 0.0f))
-        milkProduceLossItems2.add(MilkProduceLoss("Calves", 0, 0, 0.0f))
-        fragment2.setMilkProduceItems(milkProduceLossItems2)
+        val draftCapabilityFragment = DraftCapabilityReductionFragment.newInstance(1)
+        draftCapabilityFragment.setDraftCapailityLoss(DraftCapabilityLoss(0,0,0.0f))
         netLossPerCateogry.add(0.0f)
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flReductionMilkProd2, fragment2)
+            replace(R.id.flReductionMilkProd2, draftCapabilityFragment)
             commit()
         }
 
