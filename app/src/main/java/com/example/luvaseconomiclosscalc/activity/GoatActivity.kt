@@ -49,8 +49,8 @@ class GoatActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         // Add Affected Animals Treatment Loss details
         val animalTreatmentLossFragment = AffectedAnimalTreatmentFragment.newInstance(2)
         val  animalLossItems = ArrayList<AnimalTreatmentLoss>()
-        animalLossItems.add(AnimalTreatmentLoss("Adult",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Kid",0,0.0f))
+        animalLossItems.add(AnimalTreatmentLoss("Adult",0,0f))
+        animalLossItems.add(AnimalTreatmentLoss("Kid",0,0f))
 
         animalTreatmentLossFragment.setAnimalTreatmentItems(animalLossItems)
         netLossPerCateogry.add(0.0f)

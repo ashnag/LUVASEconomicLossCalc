@@ -56,6 +56,8 @@ class MortalityLossAdaptor(val mortalityLossItems: List<MortalityLoss>, var onTe
 
         fun bind(mortalityLoss: MortalityLoss, position: Int) {
             tvMortalityAgeGroup.text = mortalityLoss.ageGroup
+            etMortalityNumAnimals.setText(mortalityLoss.numOfAnimal.toString())
+            etCostMortality.setText(mortalityLoss.costPerAnimal.toString())
 
             tvTotalLossMortality.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}

@@ -27,9 +27,9 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         // Add Milk Produce Reduction Loss details
         val milkProducefragment = MilkProduceReductionFragment.newInstance(0)
         val milkProduceLossItems = ArrayList<MilkProduceLoss>()
-        milkProduceLossItems.add(MilkProduceLoss("Adult", 0, 0, 0.0f))
+        milkProduceLossItems.add(MilkProduceLoss("Adult", 0, 0, 0f))
         milkProducefragment.setMilkProduceItems(milkProduceLossItems)
-        netLossPerCateogry.add(0.0f)
+        netLossPerCateogry.add(0f)
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flReductionMilkProd, milkProducefragment)
             commit()
@@ -37,8 +37,8 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
 
         // Add Draft Capability Loss details
         val draftCapabilityFragment = DraftCapabilityReductionFragment.newInstance(1)
-        draftCapabilityFragment.setDraftCapailityLoss(DraftCapabilityLoss(0,0,0.0f))
-        netLossPerCateogry.add(0.0f)
+        draftCapabilityFragment.setDraftCapailityLoss(DraftCapabilityLoss(0,0,0f))
+        netLossPerCateogry.add(0f)
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flReductionDraftCapability, draftCapabilityFragment)
             commit()
@@ -47,12 +47,12 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         // Add Mortality Loss details
         val mortalityLossFragment = MortalityFragment.newInstance(2)
         val  mortalityLossItems = ArrayList<MortalityLoss>()
-        mortalityLossItems.add(MortalityLoss("Adult",0,0.0f))
-        mortalityLossItems.add(MortalityLoss("Heifer",0,0.0f))
-        mortalityLossItems.add(MortalityLoss("Calf",0,0.0f))
+        mortalityLossItems.add(MortalityLoss("Adult",0,0f))
+        mortalityLossItems.add(MortalityLoss("Heifer",0,0f))
+        mortalityLossItems.add(MortalityLoss("Calf",0,0f))
 
         mortalityLossFragment.setMortalityItems(mortalityLossItems)
-        netLossPerCateogry.add(0.0f)
+        netLossPerCateogry.add(0f)
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flMortality, mortalityLossFragment)
             commit()
@@ -61,12 +61,12 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         // Add Affected Animals Treatment Loss details
         val animalTreatmentLossFragment = AffectedAnimalTreatmentFragment.newInstance(3)
         val  animalLossItems = ArrayList<AnimalTreatmentLoss>()
-        animalLossItems.add(AnimalTreatmentLoss("Adult",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Heifer",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Calf",0,0.0f))
+        animalLossItems.add(AnimalTreatmentLoss("Adult",0,0f))
+        animalLossItems.add(AnimalTreatmentLoss("Heifer",0,0f))
+        animalLossItems.add(AnimalTreatmentLoss("Calf",0,0f))
 
         animalTreatmentLossFragment.setAnimalTreatmentItems(animalLossItems)
-        netLossPerCateogry.add(0.0f)
+        netLossPerCateogry.add(0f)
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flAnimalTreatment, animalTreatmentLossFragment)
             commit()

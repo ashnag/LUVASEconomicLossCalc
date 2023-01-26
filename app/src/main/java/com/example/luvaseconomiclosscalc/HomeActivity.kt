@@ -64,9 +64,24 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
+//    override fun onBackPressed() {
+////        super.onBackPressed()
+//        moveTaskToBack(true)
+//    }
+
+    private fun createIntroActivityWithResult() {
+        val parentIntent = Intent(applicationContext, IntroActivity::class.java)
+        parentIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+        startActivity(parentIntent)
+    }
+
     override fun onBackPressed() {
-//        super.onBackPressed()
-        moveTaskToBack(true)
+        createIntroActivityWithResult()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        createIntroActivityWithResult()
+        return true
     }
 
     override fun onNewIntent(intent: Intent?) {

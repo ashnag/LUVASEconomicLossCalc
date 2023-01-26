@@ -61,12 +61,12 @@ class CattleActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         // Add Affected Animals Treatment Loss details
         val animalTreatmentLossFragment = AffectedAnimalTreatmentFragment.newInstance(3)
         val  animalLossItems = ArrayList<AnimalTreatmentLoss>()
-        animalLossItems.add(AnimalTreatmentLoss("Adult",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Heifer",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Calf",0,0.0f))
+        animalLossItems.add(AnimalTreatmentLoss("Adult",0,0f))
+        animalLossItems.add(AnimalTreatmentLoss("Heifer",0,0f))
+        animalLossItems.add(AnimalTreatmentLoss("Calf",0,0f))
 
         animalTreatmentLossFragment.setAnimalTreatmentItems(animalLossItems)
-        netLossPerCateogry.add(0.0f)
+        netLossPerCateogry.add(0f)
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flCattleAnimalTreatment, animalTreatmentLossFragment)
             commit()

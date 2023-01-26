@@ -74,6 +74,9 @@ class DraftCapabilityLossAdaptor(val draftCapabilityLoss: DraftCapabilityLoss, v
         }
 
         fun bind(draftCapabilityLoss: DraftCapabilityLoss, position: Int) {
+            etNumAnimals.setText(draftCapabilityLoss.numOfAnimal.toString())
+            etDraftDurLoss.setText(draftCapabilityLoss.durLoss.toString())
+            etCostWorkHour.setText(draftCapabilityLoss.costPerWorkingHour.toString())
             tvTotalDraftCapabilityReduce.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}

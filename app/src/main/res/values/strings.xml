@@ -2,6 +2,7 @@
     <string name="app_name">LUVAS FMD E-Loss Calculator</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="click_here">Click Here &#128070;</string>
     <string name="age_group">Age Group</string>
     <string name="enter_age_group">Enter Age Group</string>
     <string name="title_activity_home">HomeActivity</string>
