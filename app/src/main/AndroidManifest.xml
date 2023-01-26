@@ -6,15 +6,16 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/luvasfmdicon_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/luvasfmdicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LUVASEconomicLossCalc"
         tools:targetApi="31">
         <activity
             android:name=".HomeActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="LUVAS FMD E-Loss Calculator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +29,44 @@
         <activity
             android:name=".activity.BuffaloActivity"
             android:exported="true"
+            android:label="Buffalo"
             android:parentActivityName=".HomeActivity">
-
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.CattleActivity"
+            android:exported="false"
+            android:label="Cattle"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.GoatActivity"
+            android:exported="false"
+            android:label="Goat"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.SheepActivity"
+            android:exported="false"
+            android:label="Sheep"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.PigActivity"
+            android:exported="false"
+            android:label="Pig"
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -61,7 +61,7 @@ class DraftCapabilityReductionFragment : Fragment() {
 //        recyclerView.setHasFixedSize(true)
         val tvTotalLoss: TextView = view.findViewById(R.id.tvTotalDraftCapabilityLoss)
         adapter = DraftCapabilityLossAdaptor(draftCapabilityLoss) { totalLossText: String ->
-            tvTotalLoss.text = totalLossText.toString()
+            tvTotalLoss.text = totalLossText
         }
         recyclerView.adapter = adapter
 

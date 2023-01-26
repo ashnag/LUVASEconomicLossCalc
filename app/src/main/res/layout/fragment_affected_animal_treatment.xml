@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DraftCapabilityReductionFragment">
+    android:layout_height="wrap_content"
+    tools:context=".AffectedAnimalTreatmentFragment">
 
     <TextView
-        android:id="@+id/tvEconomicLossDraftCapabilityLabel"
+        android:id="@+id/tvEconomicLossTreatmentLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Economic loss on account of reduction in draft capability"
+        android:text="Economic loss on account of Treatment of affected animals"
         android:textColor="#3F51B5"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -18,43 +18,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDraftCapabilityReduction"
+        android:id="@+id/rvTreatment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="32dp"
-        app:layout_constraintTop_toBottomOf="@id/tvEconomicLossDraftCapabilityLabel"
-        app:layout_constraintBottom_toTopOf="@id/tvTotalDraftCapabilityLossLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvEconomicLossTreatmentLabel"
+        app:layout_constraintBottom_toTopOf="@id/tvTreatmentTotalLossLabel"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/item_draft_reduction" />
-
+        tools:listitem="@layout/item_affected_animal_treatment" />
 
     <TextView
-        android:id="@+id/tvTotalDraftCapabilityLossLabel"
+        android:id="@+id/tvTreatmentTotalLossLabel"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="9dp"
         android:layout_marginTop="9dp"
-        android:text="Total Losses on Account of reduction in Draft Capability (Rs.)"
+        android:text="Total Losses on Account of treatment of affected animals (Rs.)"
         android:textColor="#8BC34A"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvDraftCapabilityReduction" />
+        app:layout_constraintTop_toBottomOf="@id/rvTreatment"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvTotalDraftCapabilityLoss"
+        android:id="@+id/tvTreatmentTotalLoss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
         android:inputType="numberDecimal"
         android:minWidth="48dp"
-        android:minHeight="48dp"
+        android:minHeight="32dp"
         android:text="0"
         android:textColor="#8BC34A"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/rvDraftCapabilityReduction"
-        app:layout_constraintStart_toEndOf="@id/tvTotalDraftCapabilityLossLabel"
-        app:layout_constraintTop_toBottomOf="@+id/rvDraftCapabilityReduction" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/rvTreatment"
+        app:layout_constraintStart_toEndOf="@id/tvTreatmentTotalLossLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,87 +20,241 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvChoose"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="16dp"
         android:id="@+id/llSpeciesRow1"
-        android:orientation="horizontal">
-        <ImageButton
-            android:id="@+id/imBuffalo"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:src="@drawable/buffalo"
-            android:tooltipText="Buffalo"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChoose">
 
-        <ImageButton
-            android:id="@+id/imCattle"
+
+        <LinearLayout
+            android:id="@+id/llSpeciesSubRow1"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:src="@drawable/cattle"
-            android:tooltipText="Cattle"/>
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChoose">
+
+            <ImageButton
+                android:id="@+id/imCattle"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="15dp"
+                android:contentDescription="Cattle"
+                android:scaleType="fitXY"
+                android:src="@drawable/cow_white"
+                android:tooltipText="Cattle" />
+
+            <TextView
+                android:id="@+id/tvCattleLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cattle"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSpeciesSubRow2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChoose">
+
+            <ImageButton
+                android:id="@+id/imBuffalo"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="15dp"
+                android:contentDescription="Buffalo"
+                android:scaleType="fitXY"
+                android:src="@drawable/buffalo_black"
+                android:text="Buffalo"
+                android:tooltipText="Buffalo" />
+
+            <TextView
+                android:id="@+id/tvBuffaloLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buffalo"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/llSpeciesRow1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="16dp"
         android:id="@+id/llSpeciesRow2"
-        android:orientation="horizontal">
-        <ImageButton
-            android:id="@+id/imPig"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:src="@drawable/pig"
-            android:tooltipText="Pig"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSpeciesRow1">
 
-        <ImageButton
-            android:id="@+id/imSheep"
+        <LinearLayout
+            android:id="@+id/llSpeciesSubRow3"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:src="@drawable/sheep"
-            android:tooltipText="Sheep"/>
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChoose">
+
+            <ImageButton
+                android:id="@+id/imSheep"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="1"
+                android:contentDescription="Sheep"
+                android:scaleType="fitXY"
+                android:src="@drawable/sheep_white"
+                android:tooltipText="Sheep" />
+
+            <TextView
+                android:id="@+id/tvSheepLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sheep"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSpeciesSubRow4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChoose">
+
+            <ImageButton
+                android:id="@+id/imGoat"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="15dp"
+                android:contentDescription="Goat"
+                android:scaleType="fitXY"
+                android:src="@drawable/goat_brown"
+                android:tooltipText="Goat" />
+
+            <TextView
+                android:id="@+id/tvGoatLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Goat"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llSpeciesRow3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/llSpeciesRow2"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="16dp"
-        android:id="@+id/llSpeciesRow3"
-        android:orientation="horizontal">
+        app:layout_constraintTop_toBottomOf="@+id/llSpeciesRow2">
 
-        <ImageButton
-            android:id="@+id/imGoat"
+        <LinearLayout
+            android:id="@+id/llSpeciesSubRow5"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:src="@drawable/goat"
-            android:tooltipText="Goat" />
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChoose">
+
+            <ImageButton
+                android:id="@+id/imPig"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="15dp"
+                android:contentDescription="Pig"
+                android:scaleType="fitXY"
+                android:src="@drawable/pig_pink"
+                android:tooltipText="Pig" />
+
+            <TextView
+                android:id="@+id/tvPigLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pig"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/imDUMMY"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:background="@color/white"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSpeciesRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSpeciesRow3">
+
+        <TextView
+            android:id="@+id/tvGrandTotalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grand Total Loss (Rs.)"
+            android:layout_weight="1"
+            android:textColor="#009688"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGrandTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:text="0.0"
+            android:textColor="#009688"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

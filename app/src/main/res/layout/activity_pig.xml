@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.BuffaloActivity">
+    tools:context=".activity.PigActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,12 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/lnlFrames"
+            android:id="@+id/lnlFramesPig"
             android:visibility="visible"
             tools:viewBindingIgnore="true" >
 
             <FrameLayout
-                android:id="@+id/flReductionMilkProd"
+                android:id="@+id/flPigReductionMilkProd"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:layout_margin="10dp" />
 
             <FrameLayout
-                android:id="@+id/flReductionDraftCapability"
+                android:id="@+id/flPigReductionDraftCapability"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flReductionMilkProd"
                 android:layout_width="match_parent"
@@ -36,17 +36,17 @@
                 android:layout_margin="10dp" />
 
             <FrameLayout
-                android:id="@+id/flMortality"
+                android:id="@+id/flPigMortality"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flReductionDraftCapability"
+                app:layout_constraintTop_toBottomOf="@id/flPigReductionDraftCapability"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp" />
 
             <FrameLayout
-                android:id="@+id/flAnimalTreatment"
+                android:id="@+id/flPigAnimalTreatment"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flMortality"
+                app:layout_constraintTop_toBottomOf="@id/flPigMortality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp" />
@@ -57,11 +57,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:id="@+id/lnlNetLoss"
+            android:id="@+id/lnlPigNetLoss"
             android:visibility="visible">
 
             <TextView
-                android:id="@+id/tvNetEconomicLossLabel"
+                android:id="@+id/tvPigNetEconomicLossLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
@@ -70,10 +70,10 @@
                 android:textColor="#E91E63"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/lnlFrames" />
+                app:layout_constraintTop_toBottomOf="@id/lnlFramesPig" />
 
             <TextView
-                android:id="@+id/tvNetEconomicLoss"
+                android:id="@+id/tvPigNetEconomicLoss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"

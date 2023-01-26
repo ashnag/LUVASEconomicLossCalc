@@ -5,61 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvAgeGroupLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:text="@string/age_group"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvNumAnimalsLabel"
-        app:layout_constraintEnd_toStartOf="@+id/tvAgeGroup"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/tvNumAnimalsLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_margin="40dp"
         android:text="No. of Animals"
-        app:layout_constraintEnd_toStartOf="@+id/etNumAnimals"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAgeGroupLabel" />
-
-    <TextView
-        android:id="@+id/tvAgeGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
-        android:hint="@string/enter_age_group"
-        android:text="@string/enter_age_group"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvAgeGroupLabel"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etNumAnimals"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter  Number of Animals"
+        android:hint="Enter Number of Animals"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvNumAnimalsLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvAgeGroup" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumAnimalsLabel"
+        app:layout_constraintStart_toEndOf="@id/tvNumAnimalsLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvNumAnimalsLabel" />
 
     <TextView
         android:id="@+id/tvMilkYieldLabel"
@@ -67,26 +36,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Reduction In Milk Yield (litres)"
-        app:layout_constraintBottom_toTopOf="@+id/tvDurLossLabel"
         app:layout_constraintStart_toStartOf="@+id/tvNumAnimalsLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvNumAnimalsLabel"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNumAnimalsLabel" />
 
     <EditText
         android:id="@+id/etMilkYieldReduction"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Reduction in Milk Yield (litres)"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvMilkYieldLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etNumAnimals" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvMilkYieldLabel"
+        app:layout_constraintStart_toEndOf="@id/tvMilkYieldLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvMilkYieldLabel" />
 
 
     <TextView
@@ -95,26 +60,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Duration of Loss (days)"
-        app:layout_constraintBottom_toTopOf="@+id/tvCostMilkLabel"
         app:layout_constraintStart_toStartOf="@+id/tvMilkYieldLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvMilkYieldLabel"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMilkYieldLabel" />
 
     <EditText
         android:id="@+id/etDurLoss"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Duration of Loss (days)"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDurLossLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etMilkYieldReduction" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvDurLossLabel"
+        app:layout_constraintStart_toEndOf="@id/tvDurLossLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvDurLossLabel" />
 
     <TextView
         android:id="@+id/tvCostMilkLabel"
@@ -127,26 +88,25 @@
 
     <EditText
         android:id="@+id/etCostMilk"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Cost/Litre of milk (Rs.)"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvCostMilkLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etDurLoss" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvCostMilkLabel"
+        app:layout_constraintStart_toEndOf="@id/tvCostMilkLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvCostMilkLabel" />
 
     <TextView
         android:id="@+id/tvTotalLossMilkProductionLabel"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Total Loss (Rs.)"
+        android:text="Loss (Rs.)"
+        android:textColor="#673AB7"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvCostMilkLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvCostMilkLabel" />
@@ -156,12 +116,14 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
-        android:text="0"
-        android:textStyle="bold"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textColor="#673AB7"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tvTotalLossMilkProductionLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etCostMilk" />
+        app:layout_constraintTop_toTopOf="@+id/tvTotalLossMilkProductionLabel" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvMortalityAgeGroupLabel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:text="@string/age_group"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvMortalityAgeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/enter_age_group"
+        android:text="@string/enter_age_group"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvMortalityAgeGroupLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMortalityNumAnimalsLabel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="No. of Animals"
+        app:layout_constraintStart_toStartOf="@id/tvMortalityAgeGroupLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMortalityAgeGroupLabel" />
+
+
+    <EditText
+        android:id="@+id/etMortalityNumAnimals"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:hint="Enter Number of Animals"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@id/tvMortalityNumAnimalsLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvMortalityNumAnimalsLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvMortalityNumAnimalsLabel" />
+
+    <TextView
+        android:id="@+id/tvCostMortalityLabel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Approx Cost/Animal (Rs.)"
+        app:layout_constraintStart_toStartOf="@+id/tvMortalityNumAnimalsLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMortalityNumAnimalsLabel" />
+
+    <EditText
+        android:id="@+id/etCostMortality"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:hint="Enter approx. cost/animal (Rs.)"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@id/tvCostMortalityLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvCostMortalityLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvCostMortalityLabel" />
+
+    <TextView
+        android:id="@+id/tvTotalLossMortalityLabel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Loss (Rs.)"
+        android:textColor="#673AB7"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvCostMortalityLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvCostMortalityLabel" />
+
+    <TextView
+        android:id="@+id/tvTotalLossMortality"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textColor="#673AB7"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalLossMortalityLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalLossMortalityLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

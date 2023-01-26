@@ -4,35 +4,35 @@ import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.luvaseconomiclosscalc.adaptor.MilkProduceLossAdaptor
-import com.example.luvaseconomiclosscalc.models.MilkProduceLoss
+import com.example.luvaseconomiclosscalc.adaptor.MortalityLossAdaptor
+import com.example.luvaseconomiclosscalc.models.MortalityLoss
 
 private const val ARG_PARAM1 = "fragmentIndex"
 
 
 
-private lateinit var adapter: MilkProduceLossAdaptor
-private lateinit var milkProduceLossItems: List<MilkProduceLoss>
+private lateinit var adapter: MortalityLossAdaptor
+private lateinit var mortalityLossItems: List<MortalityLoss>
 private lateinit var recyclerView: RecyclerView
 private lateinit var totalLossPerAgeGroup: ArrayList<Float>
-//private lateinit var milkProduceLossbinding: FragmentMilkProduceReductionBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MilkProduceReductionFragment.newInstance] factory method to
+ * Use the [MortalityFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MilkProduceReductionFragment : Fragment() {
+class MortalityFragment : Fragment() {
 
     private var fragmentIndex: Int? = null
     private var listener: FragmentLossChangeEventListener? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +45,7 @@ class MilkProduceReductionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_milk_produce_reduction, container, false)
+        return inflater.inflate(R.layout.fragment_mortality, container, false)
     }
 
     override fun onAttach(context: Context) {
@@ -60,11 +60,11 @@ class MilkProduceReductionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = view.findViewById(R.id.rvMilkProduceReduction)
+        recyclerView = view.findViewById(R.id.rvMortality)
         recyclerView.layoutManager = LinearLayoutManager(context)
 //        recyclerView.setHasFixedSize(true)
-        val tvTotalLoss: TextView = view.findViewById(R.id.tvTotalLoss)
-        adapter = MilkProduceLossAdaptor(milkProduceLossItems) { totalLossTextPerAgeGroup: String, position:Int ->
+        val tvTotalLoss: TextView = view.findViewById(R.id.tvMortalityTotalLoss)
+        adapter = MortalityLossAdaptor(mortalityLossItems) { totalLossTextPerAgeGroup: String, position:Int ->
             totalLossPerAgeGroup.set(position, totalLossTextPerAgeGroup.toFloat())
             var totalLoss = 0.0f
             for (loss in totalLossPerAgeGroup )
@@ -75,7 +75,7 @@ class MilkProduceReductionFragment : Fragment() {
         }
         recyclerView.adapter = adapter
 
-        tvTotalLoss.addTextChangedListener(object :TextWatcher{
+        tvTotalLoss.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
@@ -86,27 +86,20 @@ class MilkProduceReductionFragment : Fragment() {
         // 6. Bind the adapter to the data source to populate the RecyclerView
     }
 
-     fun setMilkProduceItems(items: List<MilkProduceLoss>) {
-        milkProduceLossItems = items
+
+    fun setMortalityItems(items: List<MortalityLoss>) {
+        mortalityLossItems = items
         totalLossPerAgeGroup = ArrayList(items.size)
         for (i in 1..items.size)  {
             totalLossPerAgeGroup.add(0.0f)
         }
     }
 
-
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @return A new instance of fragment BlankFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(param1: Int) =
-            MilkProduceReductionFragment().apply {
+            MortalityFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_PARAM1, param1)
                 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.BuffaloActivity">
+    tools:context=".activity.CattleActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,12 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/lnlFrames"
+            android:id="@+id/lnlFramesCattle"
             android:visibility="visible"
             tools:viewBindingIgnore="true" >
 
             <FrameLayout
-                android:id="@+id/flReductionMilkProd"
+                android:id="@+id/flCattleReductionMilkProd"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:layout_margin="10dp" />
 
             <FrameLayout
-                android:id="@+id/flReductionDraftCapability"
+                android:id="@+id/flCattleReductionDraftCapability"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flReductionMilkProd"
                 android:layout_width="match_parent"
@@ -36,17 +36,17 @@
                 android:layout_margin="10dp" />
 
             <FrameLayout
-                android:id="@+id/flMortality"
+                android:id="@+id/flCattleMortality"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flReductionDraftCapability"
+                app:layout_constraintTop_toBottomOf="@id/flCattleReductionDraftCapability"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp" />
 
             <FrameLayout
-                android:id="@+id/flAnimalTreatment"
+                android:id="@+id/flCattleAnimalTreatment"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flMortality"
+                app:layout_constraintTop_toBottomOf="@id/flCattleMortality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp" />
@@ -57,11 +57,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:id="@+id/lnlNetLoss"
+            android:id="@+id/lnlCattleNetLoss"
             android:visibility="visible">
 
             <TextView
-                android:id="@+id/tvNetEconomicLossLabel"
+                android:id="@+id/tvCattleNetEconomicLossLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
@@ -70,10 +70,10 @@
                 android:textColor="#E91E63"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/lnlFrames" />
+                app:layout_constraintTop_toBottomOf="@id/lnlFramesCattle" />
 
             <TextView
-                android:id="@+id/tvNetEconomicLoss"
+                android:id="@+id/tvCattleNetEconomicLoss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -88,4 +88,4 @@
     </LinearLayout>
 
 
-</androidx.core.widget.NestedScrollView >
+</androidx.core.widget.NestedScrollView>

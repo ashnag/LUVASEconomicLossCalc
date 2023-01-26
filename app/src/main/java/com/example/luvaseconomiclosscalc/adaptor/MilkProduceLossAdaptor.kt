@@ -29,7 +29,6 @@ class MilkProduceLossAdaptor(val milkProduceLossItems: List<MilkProduceLoss>, va
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val tvAge: TextView = itemView.findViewById(R.id.tvAgeGroup)
         private val etNumAnimals : EditText = itemView.findViewById(R.id.etNumAnimals)
         private val etDurLoss : EditText = itemView.findViewById(R.id.etDurLoss)
         private val etCostMilk : EditText = itemView.findViewById(R.id.etCostMilk)
@@ -72,7 +71,6 @@ class MilkProduceLossAdaptor(val milkProduceLossItems: List<MilkProduceLoss>, va
         }
 
         fun bind(milkProduceLoss: MilkProduceLoss, position: Int) {
-            tvAge.text = milkProduceLoss.ageGroup
 
             tvTotalLossMilkProduction.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}

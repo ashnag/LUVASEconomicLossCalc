@@ -7,31 +7,28 @@
 
     <TextView
         android:id="@+id/tvDraftNumAnimalsLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_margin="40dp"
         android:text="No. of Animals"
-        app:layout_constraintEnd_toStartOf="@+id/etDraftNumAnimals"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etDraftNumAnimals"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter  Number of Animals"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/tvDraftNumAnimalsLabel"
         app:layout_constraintStart_toEndOf="@+id/tvDraftNumAnimalsLabel"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/tvDraftNumAnimalsLabel" />
 
     <TextView
         android:id="@+id/tvWorkingHourReduceLabel"
@@ -39,26 +36,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Reduction In Working Hours"
-        app:layout_constraintBottom_toTopOf="@+id/tvDraftDurLossLabel"
         app:layout_constraintStart_toStartOf="@+id/tvDraftNumAnimalsLabel"
-        app:layout_constraintTop_toBottomOf="@+id/tvDraftNumAnimalsLabel"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDraftNumAnimalsLabel" />
 
     <EditText
         android:id="@+id/etWorkingHourReduce"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Reduction in Working Hours"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/tvWorkingHourReduceLabel"
         app:layout_constraintStart_toEndOf="@+id/tvWorkingHourReduceLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etDraftNumAnimals" />
+        app:layout_constraintTop_toTopOf="@id/tvWorkingHourReduceLabel" />
 
 
     <TextView
@@ -74,19 +67,17 @@
 
     <EditText
         android:id="@+id/etDraftDurLoss"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Duration of Loss (days)"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/tvDraftDurLossLabel"
         app:layout_constraintStart_toEndOf="@+id/tvDraftDurLossLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etWorkingHourReduce" />
+        app:layout_constraintTop_toTopOf="@id/tvDraftDurLossLabel" />
 
     <TextView
         android:id="@+id/tvCostWorkHourLabel"
@@ -99,26 +90,25 @@
 
     <EditText
         android:id="@+id/etCostWorkingHour"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Cost/Working Hour (Rs.)"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/tvCostWorkHourLabel"
         app:layout_constraintStart_toEndOf="@+id/tvCostWorkHourLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etDraftDurLoss" />
+        app:layout_constraintTop_toTopOf="@id/tvCostWorkHourLabel" />
 
     <TextView
         android:id="@+id/tvTotalDraftCapabilityReduceLabel"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Total Loss (Rs.)"
+        android:text="Loss (Rs.)"
+        android:textColor="#673AB7"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvCostWorkHourLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvCostWorkHourLabel" />
@@ -128,13 +118,14 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text="0"
+        android:textColor="#673AB7"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tvTotalDraftCapabilityReduceLabel"
-        app:layout_constraintTop_toBottomOf="@+id/etCostWorkingHour" />
+        app:layout_constraintTop_toTopOf="@id/tvTotalDraftCapabilityReduceLabel" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,24 +3,22 @@ package com.example.luvaseconomiclosscalc.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import com.example.luvaseconomiclosscalc.*
-import com.example.luvaseconomiclosscalc.databinding.ActivityBuffaloBinding
+import com.example.luvaseconomiclosscalc.databinding.ActivitySheepBinding
 import com.example.luvaseconomiclosscalc.models.AnimalTreatmentLoss
 import com.example.luvaseconomiclosscalc.models.DraftCapabilityLoss
 import com.example.luvaseconomiclosscalc.models.MilkProduceLoss
 import com.example.luvaseconomiclosscalc.models.MortalityLoss
 
-
-class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
+class SheepActivity : AppCompatActivity(),FragmentLossChangeEventListener {
 
     private lateinit var netLossPerCateogry: ArrayList<Float>
-    private lateinit var buffaloBinding: ActivityBuffaloBinding
+    private lateinit var sheepBinding: ActivitySheepBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        buffaloBinding = ActivityBuffaloBinding.inflate(layoutInflater)
-        setContentView(buffaloBinding.root)
+        sheepBinding = ActivitySheepBinding.inflate(layoutInflater)
+        setContentView(sheepBinding.root)
 
         netLossPerCateogry = ArrayList()
 
@@ -31,44 +29,33 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         milkProducefragment.setMilkProduceItems(milkProduceLossItems)
         netLossPerCateogry.add(0.0f)
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flReductionMilkProd, milkProducefragment)
-            commit()
-        }
-
-        // Add Draft Capability Loss details
-        val draftCapabilityFragment = DraftCapabilityReductionFragment.newInstance(1)
-        draftCapabilityFragment.setDraftCapailityLoss(DraftCapabilityLoss(0,0,0.0f))
-        netLossPerCateogry.add(0.0f)
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flReductionDraftCapability, draftCapabilityFragment)
+            replace(R.id.flSheepReductionMilkProd, milkProducefragment)
             commit()
         }
 
         // Add Mortality Loss details
-        val mortalityLossFragment = MortalityFragment.newInstance(2)
+        val mortalityLossFragment = MortalityFragment.newInstance(1)
         val  mortalityLossItems = ArrayList<MortalityLoss>()
         mortalityLossItems.add(MortalityLoss("Adult",0,0.0f))
-        mortalityLossItems.add(MortalityLoss("Heifer",0,0.0f))
-        mortalityLossItems.add(MortalityLoss("Calf",0,0.0f))
+        mortalityLossItems.add(MortalityLoss("Lamb",0,0.0f))
 
         mortalityLossFragment.setMortalityItems(mortalityLossItems)
         netLossPerCateogry.add(0.0f)
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flMortality, mortalityLossFragment)
+            replace(R.id.flSheepMortality, mortalityLossFragment)
             commit()
         }
 
         // Add Affected Animals Treatment Loss details
-        val animalTreatmentLossFragment = AffectedAnimalTreatmentFragment.newInstance(3)
+        val animalTreatmentLossFragment = AffectedAnimalTreatmentFragment.newInstance(2)
         val  animalLossItems = ArrayList<AnimalTreatmentLoss>()
         animalLossItems.add(AnimalTreatmentLoss("Adult",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Heifer",0,0.0f))
-        animalLossItems.add(AnimalTreatmentLoss("Calf",0,0.0f))
+        animalLossItems.add(AnimalTreatmentLoss("Lamb",0,0.0f))
 
         animalTreatmentLossFragment.setAnimalTreatmentItems(animalLossItems)
         netLossPerCateogry.add(0.0f)
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flAnimalTreatment, animalTreatmentLossFragment)
+            replace(R.id.flSheepAnimalTreatment, animalTreatmentLossFragment)
             commit()
         }
 
@@ -77,7 +64,7 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
     private fun createHomeActivityWithResult() {
         val parentIntent = Intent(applicationContext, HomeActivity::class.java)
         parentIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
-        parentIntent.putExtra("totalLossBuffalo", buffaloBinding.tvNetEconomicLoss.text.toString().toFloat())
+        parentIntent.putExtra("totalLossSheep", sheepBinding.tvSheepNetEconomicLoss.text.toString().toFloat())
         startActivity(parentIntent)
     }
 
@@ -90,7 +77,6 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         return true
     }
 
-
     override fun computeNetEconomicLoss(categoryLoss: String, index: Int?) {
         netLossPerCateogry[index!!] = categoryLoss.toFloat()
 
@@ -99,6 +85,6 @@ class BuffaloActivity : AppCompatActivity(),FragmentLossChangeEventListener {
         {
             netLoss += loss
         }
-        buffaloBinding.tvNetEconomicLoss.text = netLoss.toString()
+        sheepBinding.tvSheepNetEconomicLoss.text = netLoss.toString()
     }
 }
